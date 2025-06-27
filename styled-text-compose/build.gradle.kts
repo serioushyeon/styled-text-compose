@@ -59,7 +59,7 @@ android {
 }
 
 dependencies {
-    implementation(platform(libs.androidx.compose.bom.v20240200))
+    implementation(platform(libs.androidx.compose.bom))
 
     implementation(libs.compose.ui)
     implementation(libs.androidx.ui.text)
@@ -68,8 +68,8 @@ dependencies {
 
     testImplementation(libs.junit)
     testImplementation(libs.kotlin.test.junit)
-    androidTestImplementation(libs.androidx.junit.v115)
-    androidTestImplementation(libs.androidx.espresso.core.v351)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.ui.test.junit4)
 
     debugImplementation(libs.ui.tooling)
