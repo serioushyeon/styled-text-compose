@@ -3,6 +3,7 @@ import com.vanniktech.maven.publish.SonatypeHost
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.21"
     id("maven-publish")
     id("signing")
     id ("com.vanniktech.maven.publish") version "0.28.0"
@@ -50,12 +51,6 @@ android {
         kotlinCompilerExtensionVersion = "1.5.8"
     }
 
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-            withJavadocJar()
-        }
-    }
 }
 
 dependencies {
@@ -64,6 +59,7 @@ dependencies {
     implementation(libs.compose.ui)
     implementation(libs.androidx.ui.text)
     implementation(libs.androidx.foundation)
+    implementation(libs.material)
     implementation(libs.material3)
 
     testImplementation(libs.junit)
